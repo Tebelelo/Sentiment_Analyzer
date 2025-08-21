@@ -221,7 +221,6 @@ with col2:
                             st.markdown("### Sentiment Distribution Dashboard")
                             
                             # Only displaying the Average Sentiment Scores graph
-                            st.subheader("Average Sentiment Scores")
                             avg_scores = results_df[['Positive', 'Negative', 'Neutral']].mean().reset_index()
                             avg_scores.columns = ['Score Type', 'Average Score']
                             
@@ -229,7 +228,6 @@ with col2:
                                 avg_scores,
                                 x='Score Type',
                                 y='Average Score',
-                                title='Average VADER Scores',
                                 color='Score Type',
                                 color_discrete_map={
                                     'Positive': 'green',
