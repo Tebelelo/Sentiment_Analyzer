@@ -160,7 +160,7 @@ with col2:
                 with st.expander("Show Sentiment Explanation"):
                     st.info(explanation, icon="🤖")
 
-                st.subheader("Detailed Scores")
+                st.markdown("### Sentiment Distribution Dashboard")
                 if 'compound' in scores:
                     del scores['compound']
                 scores_df = pd.DataFrame([scores]).T.reset_index()
