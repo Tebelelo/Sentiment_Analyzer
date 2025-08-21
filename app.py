@@ -9,8 +9,12 @@ import asyncio
 import os
 from dotenv import load_dotenv
 
-#loading and accessing a key
-load_dotenv()
+
+api_key = st.secrets["API_KEY"]
+
+
+#loading and accessing a key locally
+#load_dotenv()
 
 
 # Set Streamlit page configuration for a wider layout and custom styling
@@ -44,7 +48,7 @@ async def get_gemini_explanation(text, sentiment, scores):
     Generates a natural language explanation for sentiment using Google Gemini.
     """
 
-    api_key = os.getenv("API_KEY")
+    #api_key = os.getenv("API_KEY")
     
     try:
         genai.configure(api_key=api_key)
